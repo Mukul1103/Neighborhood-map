@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Neighborhood Map Project</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+</head>
+
+
+<body>
+
+	<div class="static">
+  			<ul>
+				<li>
+					<input type="text" id="search" data-bind="value: searchText, valueUpdate: 'afterkeydown', event: {keyup: search}"  placeholder="Search">
+				</li>
+			</ul>
+  			<ul data-bind="foreach: points">
+			
+				<li><a href="#" data-bind="text: getTitle(), visible: show ,click: $parent.setSelected"></a>
+				</li>
+				
+			</ul>
+  
+		
+	</div>
+
+	<div id="map" class="map-canvas"></div>	
+	
+	<script src="javascript/app.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.4.2.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAy13VFFUjHGlg7RdhiC_6XV_1GK2hevY&callback=initMap" async defer onerror="error()"></script>
+
+</body>
+</html>

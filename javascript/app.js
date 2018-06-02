@@ -3,7 +3,6 @@ function error() {
     window.alert('Map API failed to load.');
 }
 
-
 var pointers = [{
         title: 'Bestech Square Mall',
         position: {
